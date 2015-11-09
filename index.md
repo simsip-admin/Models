@@ -1,10 +1,10 @@
 ---
 layout: home
-title: Simsip
+title: Bill McRoberts
 home: true
 ---
 
-# Dependency Service for In-App Purchases
+# Slack Sandbox
 
 
 ### ([https://github.com/simsip-admin/InApp/](https://github.com/simsip-admin/InApp "Dependency Service for In-App Purchases"))
