@@ -64,13 +64,11 @@ Start with the class ```OAuthSettings``` to hold our OAuth credentials.
 
 Note here that we are using the "code" OAuth flow as opposed to the "token" OAuth flow, hence the need for the accessTokenUrl.
 
-Add a public ```OAuthSettings``` to your ```App`` class.
+Add a public ```OAuthSettings``` to your ```App``` class.
 
-```
 
-public OAuthSettings OAuthSettings { get; private set; }
+    public OAuthSettings OAuthSettings { get; private set; }
 
-```
 
 And initialize it in the ```App``` constructor. The values will come from you Slack app that you setup above.
 
