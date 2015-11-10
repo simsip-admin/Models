@@ -29,10 +29,10 @@ My work includes 4 years development on the GroupMe (http://groupme.com) group c
 ### OAuth Authentication
 We'll use Xamarin.Auth for our OAuth authentication needs. Because we need platform specific UI flows for authentication, we'll create a custom page renderer for our needs.
 
-Start with the class OAuthSettings to hold our OAuth credentials.
+Start with the class ```OAuthSettings``` to hold our OAuth credentials.
 
 
-```csharp
+```
 
     public class OAuthSettings
     {
@@ -59,8 +59,34 @@ Start with the class OAuthSettings to hold our OAuth credentials.
         public string RedirectUrl { get; private set; }
         public string AccessTokenUrl { get; private set; }
     }
+
 ```
 
+Note here that we are using the "code" OAuth flow as opposed to the "token" OAuth flow, hence the need for the accessTokenUrl.
+
+Add a public ```OAuthSettings``` to your ```App`` class.
+
+```
+
+public OAuthSettings OAuthSettings { get; private set; }
+
+```
+
+And initialize it in the ```App``` constructor. The values will come from you Slack app that you setup above.
+
+```
+
+            OAuthSettings = new OAuthSettings(
+                clientId: "you client id",
+                clientSecret: "your client secret",
+                scope: "channels:read chat:write:user",
+                authorizeUrl: "https://slack.com/oauth/authorize",
+                redirectUrl: "your redirect url",
+                accessTokenUrl: "https://slack.com/api/oauth.access");
+
+```
+
+Note that we are only using a simple set of ```scopes``` and that the redirect url needs to be a valid url of your own. 
 
 ### Web API
 
