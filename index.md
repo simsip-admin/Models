@@ -33,7 +33,6 @@ Start with the class OAuthSettings to hold our OAuth credentials.
 
 
 ```csharp
-
     public class OAuthSettings
     {
         public OAuthSettings(
@@ -59,7 +58,6 @@ Start with the class OAuthSettings to hold our OAuth credentials.
         public string RedirectUrl { get; private set; }
         public string AccessTokenUrl { get; private set; }
     }
-
 ```
 
 
