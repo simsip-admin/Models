@@ -32,7 +32,7 @@ We'll use Xamarin.Auth for our OAuth authentication needs. Because we need platf
 Start with the class OAuthSettings to hold our OAuth credentials.
 
 
-```
+```c#
 
     public class OAuthSettings
     {
