@@ -1,4 +1,11 @@
-﻿using Xamarin.Forms;
+﻿using Models.Models;
+using Models.Refit;
+using Models.Services;
+using Refit;
+using System;
+using System.Diagnostics;
+using Xamarin.Forms;
+
 
 namespace Models.Pages
 {
@@ -17,7 +24,31 @@ namespace Models.Pages
                     XAlign = TextAlignment.Center,
                     YAlign = TextAlignment.Center
                 };
+
+                GetChannels();
             });
+        }
+
+        async void GetChannels()
+        {
+            try
+            {
+                var settings = new RefitSettings 
+                { 
+                    UrlParameterFormatter = new CustomUrlParameterFormatter() 
+                };
+                var api = RestService.For<ISlackChannels>( ("https://slack.com/api/"), settings);
+
+                var channels = await api.GetChannels();
+                foreach(Channel channel in channels.Channels)
+                {
+                    Debug.WriteLine(channel.Name);
+                }
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine("Exception: " + ex);
+            }
         }
     }
 }
