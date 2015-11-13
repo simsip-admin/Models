@@ -6,9 +6,9 @@ home: true
 
 ## Slack Sandbox
 
-Xamarin Forms &bull; Custom Rendering &bull; Xamarin.Auth &bull; Refit
+Xamarin.Forms &bull; Custom Rendering &bull; Xamarin.Auth &bull; Refit
 
-Beginning sandbox repository for building out a Xamarin Forms implementation for Slack. 
+Beginning sandbox repository for building out a Xamarin.Forms implementation for Slack. 
 
 <img src="images/slack.png" width="20%">
 
