@@ -1,7 +1,7 @@
 ﻿using Models.Models;
 using Refit;
 using System.Threading.Tasks;
-
+using Models.Models.Methods.Channels;
 
 namespace Models.Services
 {
@@ -9,6 +9,6 @@ namespace Models.Services
     {
         // https://slack.com/api/channels.list
         [Get("/channels.list")]
-        Task<ChannelList> GetChannels(string token = "");
+        Task<ChannelsListResponse> GetChannels(string token = "");
     }
 }

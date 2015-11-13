@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using Models.Models.Types;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.ComponentModel;
 
 
-namespace Models.Models
+namespace Models.Models.Methods.Channels
 {
-    public class ChannelList
+    public class ChannelsListResponse
     {
         [JsonProperty(PropertyName = "ok")]
         public bool Ok { get; set; }

@@ -1,4 +1,4 @@
-﻿using Models.Models;
+﻿using Models.Models.Types;
 using Models.Refit;
 using Models.Services;
 using Refit;
