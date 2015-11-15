@@ -37,9 +37,9 @@ namespace Models.Pages
                 { 
                     UrlParameterFormatter = new CustomUrlParameterFormatter() 
                 };
-                var api = RestService.For<ISlackChannels>( ("https://slack.com/api/"), settings);
+                var api = RestService.For<IChannels>( ("https://slack.com/api/"), settings);
 
-                var channels = await api.GetChannels();
+                var channels = await api.ChannelsList();
                 foreach(Channel channel in channels.Channels)
                 {
                     Debug.WriteLine(channel.Name);

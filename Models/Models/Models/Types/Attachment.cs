@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace Models.Models.Types
 {
+    /// <summary>
+    /// Messages can have zero or more attachments, defined as an array. 
+    /// 
+    /// Each hash in that array will contain multiple properties.
+    /// </summary>
     public class Attachment
     {
         /// <summary>
@@ -82,7 +87,7 @@ namespace Models.Models.Types
         /// table inside the message attachment.
         /// </summary>
         [JsonProperty(PropertyName = "fields", DefaultValueHandling = DefaultValueHandling.Populate)]
-        public List<Field> fields { get; set; }
+        public List<Field> Fields { get; set; }
 
         /// <summary>
         /// A valid URL to an image file that will be displayed inside a message attachment. 
@@ -93,7 +98,7 @@ namespace Models.Models.Types
         /// while still maintaining the original aspect ratio.
         /// </summary>
         [JsonProperty(PropertyName = "image_url", DefaultValueHandling = DefaultValueHandling.Populate)]
-        public string image_url { get; set; }
+        public string ImageUrl { get; set; }
 
         /// <summary>
         /// A valid URL to an image file that will be displayed as a thumbnail on the right side of a 
@@ -105,6 +110,6 @@ namespace Models.Models.Types
         /// ratio of the image. The filesize of the image must also be less than 500 KB.
         /// </summary>
         [JsonProperty(PropertyName = "thumb_url", DefaultValueHandling = DefaultValueHandling.Populate)]
-        public string thumb_url { get; set; }
+        public string ThumbUrl { get; set; }
     }
 }

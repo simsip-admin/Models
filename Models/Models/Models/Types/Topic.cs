@@ -1,15 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+
 
 namespace Models.Models.Types
 {
+    /// <summary>
+    /// Provides information about a channel or groups topic.
+    /// </summary>
     public class Topic
     {
-        public string value { get; set; }
-        public string creator { get; set; }
-        public int last_set { get; set; }
+        /// <summary>
+        /// TODO
+        /// </summary>
+        [JsonProperty(PropertyName = "value", DefaultValueHandling = DefaultValueHandling.Populate)]
+        public string Value { get; set; }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        [JsonProperty(PropertyName = "creator", DefaultValueHandling = DefaultValueHandling.Populate)]
+        public string Creator { get; set; }
+
+        /// <summary>
+        /// TODO
+        /// </summary>
+        [JsonProperty(PropertyName = "last_set", DefaultValueHandling = DefaultValueHandling.Populate)]
+        public int LastSet { get; set; }
     }
 }

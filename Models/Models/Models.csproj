@@ -36,8 +36,16 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Core\Constants.cs" />
+    <Compile Include="Models\Methods\Channels\MessagesListResponse.cs" />
+    <Compile Include="Models\Methods\Channels\ChannelsResponse.cs" />
     <Compile Include="Models\Methods\Channels\ChannelsListResponse.cs" />
-    <Compile Include="Models\Types\Ok.cs" />
+    <Compile Include="Models\Methods\Chat\UpdateMessageResponse.cs" />
+    <Compile Include="Models\Methods\Chat\PostMessageResponse.cs" />
+    <Compile Include="Models\Methods\Emoji\EmojiListResponse.cs" />
+    <Compile Include="Models\Methods\Files\FilesResponse.cs" />
+    <Compile Include="Models\Methods\Groups\GroupsListResponse.cs" />
+    <Compile Include="Models\Methods\Groups\GroupsResponse.cs" />
+    <Compile Include="Models\Methods\OkResponse.cs" />
     <Compile Include="Models\Types\Attachment.cs" />
     <Compile Include="Models\Types\Channel.cs" />
     <Compile Include="Models\Types\Edited.cs" />
@@ -59,7 +67,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Refit\AuthenticatedHttpClientHandler.cs" />
     <Compile Include="Refit\CustomUrlParameterFormatter.cs" />
-    <Compile Include="Services\ISlackChannels.cs" />
+    <Compile Include="Services\IGroups.cs" />
+    <Compile Include="Services\IFiles.cs" />
+    <Compile Include="Services\IEmoji.cs" />
+    <Compile Include="Services\IChat.cs" />
+    <Compile Include="Services\IChannels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -88,10 +100,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Methods\Chat\" />
-    <Folder Include="Models\Methods\Emoji\" />
-    <Folder Include="Models\Methods\Files\" />
-    <Folder Include="Models\Methods\Groups\" />
     <Folder Include="Models\Methods\Im\" />
     <Folder Include="Models\Methods\MpIm\" />
     <Folder Include="Models\Methods\Pins\" />

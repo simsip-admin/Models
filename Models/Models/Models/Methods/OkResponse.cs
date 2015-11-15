@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel;
 
-namespace Models.Models.Types
+namespace Models.Models.Methods
 {
 
-    public class Ok
+    public class OkResponse
     {
         [JsonProperty(PropertyName="ok")]
         public bool OK { get; set; }
